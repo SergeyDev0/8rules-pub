@@ -17,11 +17,11 @@
 <body>
   <header>
     <div class="header__wrapper-logo">
-      <img class="header__logo" src="./icons/logo.svg" alt="logo">
+      <a href="#"><img class="header__logo" src="./icons/long-logo.svg" alt="logo"></a>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="#">Главная</a></li>
+        <li class="header__nav-item"><a href="#">Акции</a></li>
         <li class="header__nav-item dropdown--link">
           <a href="#">Ассортимент 
             <img width="12" src="./icons/arrow-down.svg" alt="arrow down">
@@ -43,9 +43,16 @@
         <li class="header__nav-item"><a href="#">О нас</a></li>
       </ul>
     </nav>
+    <div class="header__contacts">
+      <a href="tel:+78652570690" target="_blank" class="header__contacts-item">+7 (8652) 57-06-90</a>
+      <a href="https://yandex.ru/maps/36/stavropol/house/ulitsa_50_let_vlksm_93/YEgYfwZpS0UOQFpvfXxxcX5iYw==/?ll=41.919209%2C45.000217&z=16.45" target="_blank" class="header__contacts-item">Ставрополь, ул. 50 лет ВЛКСМ, 93</a>
+    </div>
   </header>
   <main>
-    <section>
+    <section class="actions">
+
+    </section>
+    <section class="recommendations">
       <h2 class="section__title">Мы рекомендуем</h2>
       <div class="section__wrapper-cards">
         <div class="section__card">
@@ -54,8 +61,14 @@
           <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
           <div class="section__card__wrapper-price">
             <div class="section__card-info">
-              <p class="section__card-weight">200 гр.</p>
-              <h4 class="section__card-price">189 ₽</h4>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
             </div>
           </div>
         </div>
@@ -65,8 +78,14 @@
           <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
           <div class="section__card__wrapper-price">
             <div class="section__card-info">
-              <p class="section__card-weight">200 гр.</p>
-              <h4 class="section__card-price">189 ₽</h4>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
             </div>
           </div>
         </div>
@@ -76,8 +95,10 @@
           <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
           <div class="section__card__wrapper-price">
             <div class="section__card-info">
-              <p class="section__card-weight">200 гр.</p>
-              <h4 class="section__card-price">189 ₽</h4>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
             </div>
           </div>
         </div>
@@ -87,8 +108,10 @@
           <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
           <div class="section__card__wrapper-price">
             <div class="section__card-info">
-              <p class="section__card-weight">200 гр.</p>
-              <h4 class="section__card-price">189 ₽</h4>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
             </div>
           </div>
         </div>
@@ -98,8 +121,61 @@
           <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
           <div class="section__card__wrapper-price">
             <div class="section__card-info">
-              <p class="section__card-weight">200 гр.</p>
-              <h4 class="section__card-price">189 ₽</h4>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
             </div>
           </div>
         </div>
