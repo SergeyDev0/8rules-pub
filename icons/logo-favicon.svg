@@ -8,12 +8,10 @@
         fill: black;
       } 
       @media (prefers-color-scheme: dark) {
-        #d {
-        fill: white;
-      } 
-      #dr {
-        fill: white;
-      } 
+        #d, #dr {
+          fill: white;
+          stroke: white;
+        }
       }
     ]]> 
   </style>
