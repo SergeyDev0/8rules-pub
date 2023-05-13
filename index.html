@@ -7,25 +7,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./icons/logo-favicon.svg" type="image/x-icon">
   <title>Бар 8 правил</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/media.css">
 </head>
 
-<body>
+<body id="home">
   <header>
+    <div class="header__wrapper-hamburger">
+      <button class="header__hamburger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="header__nav-list hide">
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#home">Главная</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#about">О компании</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#features">Особенности</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#certificate">Сертификат</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </div>
     <div class="header__wrapper-logo">
-      <a href="#"><img class="header__logo" src="./icons/long-logo.svg" alt="logo"></a>
+      <a href="#home"><img class="header__logo" src="./icons/long-logo.svg" alt="logo"></a>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="#">Акции</a></li>
+        <li class="header__nav-item"><a href="#home">Акции</a></li>
         <li class="header__nav-item dropdown--link">
-          <a href="#">Ассортимент 
+          <button>Ассортимент
             <img width="12" src="./icons/arrow-down.svg" alt="arrow down">
-          </a>
-          <ul class="header__nav-item--dropdown">
+          </button>
+          <ul class="header__nav-item--dropdown hide">
             <li><a href="#snacks">Закуски</a></li>
             <li><a href="#sausages">Колбаски и шницель</a></li>
             <li><a href="#roast">Жаркое по-домашнему</a></li>
@@ -38,21 +63,76 @@
             <li><a href="#softDrinks">Безалкогольные напитки</a></li>
           </ul>
         </li>
-        <li class="header__nav-item"><a href="#">Отзывы</a></li>
-        <li class="header__nav-item"><a href="#">О нас</a></li>
+        <li class="header__nav-item"><a href="#reviews">Отзывы</a></li>
+        <li class="header__nav-item"><a href="#about">О нас</a></li>
       </ul>
     </nav>
     <div class="header__contacts">
       <a href="tel:+78652570690" target="_blank" class="header__contacts-item">+7 (8652) 57-06-90</a>
-      <a href="https://yandex.ru/maps/36/stavropol/house/ulitsa_50_let_vlksm_93/YEgYfwZpS0UOQFpvfXxxcX5iYw==/?ll=41.919209%2C45.000217&z=16.45" target="_blank" class="header__contacts-item">Ставрополь, ул. 50 лет ВЛКСМ, 93</a>
+      <a href="https://yandex.ru/maps/36/stavropol/house/ulitsa_50_let_vlksm_93/YEgYfwZpS0UOQFpvfXxxcX5iYw==/?ll=41.919209%2C45.000217&z=16.45"
+        target="_blank" class="header__contacts-item">Ставрополь, ул. 50 лет ВЛКСМ, 93</a>
     </div>
   </header>
   <main>
     <section class="actions">
-
+      <div class="actions__info">
+        <div class="actions__info-card">
+          <img class="actions__info-icon" src="./icons/clock.svg">
+          <div class="col">
+            <h3 class="actions__info-title">8:00 - 00:00</h3>
+            <p class="actions__info-description">Время работы</p>
+          </div>
+        </div>
+        <div class="actions__info-card">
+          <img class="actions__info-icon" src="./icons/phone.svg">
+          <div class="col">
+            <h3 class="actions__info-title">+7 (8652) 57-06-90</h3>
+            <p class="actions__info-description">Номер телефона</p>
+          </div>
+        </div>
+        <div class="actions__info-card">
+          <img class="actions__info-icon" src="./icons/price.svg">
+          <div class="col">
+            <h3 class="actions__info-title">10% на первый заказ</h3>
+            <p class="actions__info-description">Регулярные скидки</p>
+          </div>
+        </div>
+        <div class="actions__info-card">
+          <img class="actions__info-icon" src="./icons/conversation.svg">
+          <div class="col">
+            <h3 class="actions__info-title">17:00 - 00:00</h3>
+            <p class="actions__info-description">Время брони</p>
+          </div>
+        </div>
+      </div>
+      <div class="actions__wrapper-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/discount.jpg" alt="Скидка 70% при самовывозе"></div>
+            <div class="swiper-slide"><img src="./img/discount.jpg" alt="Скидка 70% при самовывозе"></div>
+            <div class="swiper-slide"><img src="./img/discount.jpg" alt="Скидка 70% при самовывозе"></div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
-    <section>
-      <h2 class="section__title">Мы рекомендуем</h2>
+    <div class="modal__wrapper-card hide">
+      <div class="modal__card">
+        <button class="modal__close">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 5L5 19M5.00001 5L19 19" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <img class="modal__card-img" src="" alt="">
+        <h2 class="modal__card-title"></h2>
+        <p class="modal__card-description"></p>
+      </div>
+    </div>
+    <section id="assortment">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Мы рекомендуем</h2><img class="section__arrow-icon" src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card new">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -180,8 +260,10 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="snacks">Закуски</h2>
+    <section id="snacks">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Закуски</h2><img class="section__arrow-icon" src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -253,8 +335,11 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="sausages">Колбаски и шницель</h2>
+    <section id="sausages">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Колбаски и шницель</h2><img class="section__arrow-icon"
+          src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -326,8 +411,11 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="roast">Жаркое по-домашнему</h2>
+    <section id="roast">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Жаркое по-домашнему</h2><img class="section__arrow-icon"
+          src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card new">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -399,8 +487,10 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="pasta">Паста</h2>
+    <section id="pasta">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Паста</h2><img class="section__arrow-icon" src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -472,8 +562,10 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="salads">Салаты</h2>
+    <section id="salads">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Салаты</h2><img class="section__arrow-icon" src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -545,8 +637,10 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="grill">Гриль</h2>
+    <section id="grill">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Гриль</h2><img class="section__arrow-icon" src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -618,154 +712,10 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="pizza">Пицца</h2>
-      <div class="section__wrapper-cards">
-        <div class="section__card">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card new">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section id="pizza">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Пицца</h2><img class="section__arrow-icon" src="./icons/arrow-right.svg">
       </div>
-    </section>
-    <section>
-      <h2 class="section__title" id="burgers">Бургеры, сэндвичи и вафли</h2>
-      <div class="section__wrapper-cards">
-        <div class="section__card new">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card">
-          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
-          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
-          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
-          <div class="section__card__wrapper-price">
-            <div class="section__card-info">
-              <div class="section__card-portion">
-                <h4 class="section__card-price">189 руб.</h4>
-                <p class="section__card-weight">200 гр</p>
-              </div>
-              <div class="section__card-portion">
-                <h4 class="section__card-price">239 руб.</h4>
-                <p class="section__card-weight">300 гр</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2 class="section__title" id="alcoholicDrinks">Алкогольные напитки</h2>
       <div class="section__wrapper-cards">
         <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -837,8 +787,11 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section__title" id="softDrinks">Безалкогольные напитки</h2>
+    <section id="burgers">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Бургеры, сэндвичи и вафли</h2><img class="section__arrow-icon"
+          src="./icons/arrow-right.svg">
+      </div>
       <div class="section__wrapper-cards">
         <div class="section__card new">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
@@ -857,7 +810,7 @@
             </div>
           </div>
         </div>
-        <div class="section__card new">
+        <div class="section__card">
           <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
           <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
           <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
@@ -910,15 +863,216 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="alcoholicDrinks">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Алкогольные напитки</h2><img class="section__arrow-icon"
+          src="./icons/arrow-right.svg">
+      </div>
+      <div class="section__wrapper-cards">
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card new">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="softDrinks">
+      <div class="section__wrapper-title">
+        <h2 class="section__title">Безалкогольные напитки</h2><img class="section__arrow-icon"
+          src="./icons/arrow-right.svg">
+      </div>
+      <div class="section__wrapper-cards">
+        <div class="section__card new">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card new">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик, укроп, лук, перец, соль, майонез,
+            не знаю ещё что-то</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__card">
+          <img class="section__card-img" src="https://dostavkafriday.ru/d/5369d6eb.jpg" alt="Картинка">
+          <h3 class="section__card-title">Овощное ассорти с зеленью</h3>
+          <p class="section__card-description">Огурчики, помидоры, болгарский перчик и зелень</p>
+          <div class="section__card__wrapper-price">
+            <div class="section__card-info">
+              <div class="section__card-portion">
+                <h4 class="section__card-price">189 руб.</h4>
+                <p class="section__card-weight">200 гр</p>
+              </div>
+              <div class="section__card-portion">
+                <h4 class="section__card-price">239 руб.</h4>
+                <p class="section__card-weight">300 гр</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews" id="reviews">
       <h2 class="section__title">Отзывы</h2>
+      <div class="section__wrapper-cards">
+        <div class="reviews__card">
+          <img class="reviews__card-img" src="./img/avatar-user.jpg" alt="аватар пользователя">
+          <p class="reviews__card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat</p>
+        </div>
+        <div class="reviews__card">
+          <img class="reviews__card-img" src="./img/avatar-user.jpg" alt="аватар пользователя">
+          <p class="reviews__card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat exercitationem
+            perspiciatis impedit adipisci</p>
+        </div>
+        <div class="reviews__card">
+          <img class="reviews__card-img" src="./img/avatar-user.jpg" alt="аватар пользователя">
+          <p class="reviews__card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam fugit
+            repudiandae exercitationem perspiciatis impedit adipisci</p>
+        </div>
+        <div class="reviews__card">
+          <img class="reviews__card-img" src="./img/avatar-user.jpg" alt="аватар пользователя">
+          <p class="reviews__card-text">Lorem ipsum dolor sit amet consectetur, adipisicing </p>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2 class="section__title">Если у вас оставлись вопросы</h2>
+      <h3 class="about__title">Контакты</h3>
+      <h4 class="about__subtitle">Если у вас возникнут вопросы или пожелания, вы можете связаться с нами любым удобным
+        способом:</h4>
+      <h4 class="about__subtitle"><span>Телефон:</span> +7 (8652) 57-06-90</h4>
+      <h4 class="about__subtitle"><span>Email:</span> example@mail.ru</h4>
+      <h3 class="about__title">Реквизиты</h3>
+      <h4 class="about__subtitle"><span>Юридическое лицо:</span> ИП ...</h4>
+      <h4 class="about__subtitle"><span>ИНН:</span> 000000000000</h4>
+      <h4 class="about__subtitle"><span>ОГРН:</span> 000000000000000</h4>
+      <div class="about__wrapper-info">
+
+      </div>
+      <iframe class="about__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d5d5dc0acbab2ed234a321dd4db21d3518a17559c4b099a1e6fd699fdb0030a&amp;scroll=false&source=constructor"
+        width="100%" height="400" frameborder="0"></iframe>
     </section>
   </main>
   <footer>
-
+    <h5 class="footer__copyright">© 2023 Copyright. Все права защищены</h5>
+    <div class="footer__wrapper-socials">
+      <a href="https://vk.com/8pravilstv" class="footer__social">
+        <img src="./icons/vk.svg" alt="">
+      </a>
+      <a href="https://instagram.com/8pravil?igshid=YmMyMTA2M2Y=" class="footer__social">
+        <img src="./icons/instagram.svg" alt="">
+      </a>
+    </div>
   </footer>
   <script src="./js/hideScrolLHeader.js"></script>
+  <script src="./js/modalCard.js"></script>
   <script src="./js/smoothScroll.js"></script>
+  <script src="./js/swiperDiscounts.js" type="module"></script>
 </body>
 
 </html>

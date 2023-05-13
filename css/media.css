@@ -1,0 +1,120 @@
+@media screen and (min-width: 1024px) {
+  .header__wrapper-hamburger {
+    display: none;
+  }
+
+  .section__arrow-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav-list.hide {
+    position: absolute;
+    visibility: hidden;
+    width: 100vw;
+  }
+
+  .header__wrapper-hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .header__hamburger-button span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  .section__arrow-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__wrapper-logo {
+    display: none;
+  }
+
+  .actions {
+    height: auto;
+  }
+
+  .actions__info {
+    display: none;
+  }
+
+  .actions__wrapper-slider {
+    flex-grow: 0;
+    margin-top: 1.5rem;
+  }
+
+  .section__wrapper-cards {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  section:not(.about, .actions) {
+    padding: 0;
+  }
+
+  section#softDrinks {
+    margin: 0;
+  }
+
+  .section__title {
+    padding-bottom: 0;
+    font-size: 1.4rem;
+  }
+
+  .reviews {
+    display: none;
+  }
+
+  .section__arrow-icon {
+    display: block;
+    height: 18px;
+  }
+
+  .section__wrapper-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: .5rem 2rem;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .about .section__title {
+    display: none;
+  }
+
+  .about__title {
+    margin-top: 0;
+  }
+}
