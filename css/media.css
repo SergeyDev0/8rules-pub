@@ -75,9 +75,19 @@
   .section__wrapper-cards {
     position: absolute;
     visibility: hidden;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
   }
 
-  section:not(.about, .actions) {
+  .section__card {
+    width: calc((100% - 4rem) / 3);
+  }
+
+  section {
+    padding: 0 2rem;
+  }
+
+  .section__product {
     padding: 0;
   }
 
@@ -85,17 +95,47 @@
     margin: 0;
   }
 
+  .modal__card {
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__card-img {
+    height: auto;
+    width: 80vw;
+  }
+
   .section__title {
     padding-bottom: 0;
     font-size: 1.4rem;
+    user-select: none;
+  }
+
+  .section__product.open .section__title {
+    margin-bottom: 1.5rem;
   }
 
   #assortment .section__title {
     color: #ffab52;
   }
 
+  .section__wrapper-cards {
+    position: static;
+    visibility: visible;
+  }
+
+  .section__wrapper-cards.hide {
+    visibility: hidden;
+    position: absolute;
+  }
+
   .actions .swiper {
-    height: a;
+    height: auto;
   }
 
   .reviews {
@@ -105,17 +145,20 @@
   .section__arrow-icon {
     display: block;
     height: 18px;
+    transition: .2s transform;
+  }
+
+  .section__arrow-icon.active {
+    transform: rotate(90deg);
   }
 
   .section__wrapper-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    border-bottom: 1px solid gray;
-    padding: .7rem 2rem;
     box-sizing: border-box;
     cursor: pointer;
+    padding: .7rem 2rem;
   }
 
   .about .section__title {
@@ -124,5 +167,11 @@
 
   .about__title {
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .section__card {
+    width: calc((100% - 2rem) / 2)
   }
 }
