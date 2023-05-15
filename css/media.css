@@ -11,6 +11,7 @@
 @media screen and (max-width: 1024px) {
   header {
     grid-template-columns: 1fr auto 1fr;
+    z-index: 4;
   }
 
   .header__nav {
@@ -18,9 +19,8 @@
   }
 
   .header__nav-list.hide {
-    position: absolute;
-    display: none;
-    width: 100vw;
+    left: -1200px;
+    visibility: hidden;
   }
 
   .header__wrapper-hamburger {
@@ -57,6 +57,18 @@
 
   .header__wrapper-logo {
     display: none;
+  }
+
+  .header__nav-list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #18191C;
+    transition: .2s;
   }
 
   .actions {
@@ -103,6 +115,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  .modal__close {
+    top: 1.5rem;
   }
 
   .modal__card-img {
@@ -145,6 +163,7 @@
   .section__arrow-icon {
     display: block;
     height: 18px;
+    transform: rotate(0deg);
     transition: .2s transform;
   }
 
@@ -153,6 +172,7 @@
   }
 
   .section__wrapper-title {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,7 +186,12 @@
   }
 
   .about__title {
-    margin-top: 0;
+    padding-top: 0;
+  }
+
+  #about {
+    padding: .1rem 2rem;
+    padding-bottom: 1rem;
   }
 }
 

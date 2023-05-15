@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const headerHidden = () => header.classList.contains("hide");
       if (currentScroll > prevScroll && !headerHidden()) {
         header.classList.add("hide");
+        document.querySelector(".header__nav-list").classList.add("hide");
       };
       if (currentScroll < prevScroll && headerHidden()) {
         header.classList.remove("hide");
