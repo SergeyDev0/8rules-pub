@@ -229,6 +229,7 @@ section {
 
 .actions .swiper-pagination {
   bottom: -2rem;
+  z-index: 2;
 }
 
 .actions .swiper-pagination-bullet {
