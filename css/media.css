@@ -163,8 +163,7 @@
   }
 
   .section__wrapper-cards.hide {
-    visibility: hidden;
-    position: absolute;
+    display: none;
   }
 
   .actions .swiper {
@@ -212,6 +211,21 @@
 
 @media screen and (max-width: 425px) {
   .section__card {
-    width: calc((100% - 2rem) / 2)
+    width: 100%
+  }
+
+  .header__contacts-item {
+    font-size: .7rem;
+  }
+
+  .header__hamburger-button span {
+    height: 1px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__hamburger-button {
+    width: 35px;
+    height: 20px;
   }
 }
