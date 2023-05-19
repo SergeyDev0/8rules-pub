@@ -147,11 +147,11 @@ section {
 }
 
 .actions {
-  height: calc(100vh - 59px);
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 2rem;
+  margin: auto;
+  max-width: 90vw;
 }
 
 .actions__info {
@@ -177,7 +177,8 @@ section {
 
 .actions .swiper {
   width: 100%;
-  height: calc(100vh - 220px);
+  height: auto;
+  border-radius: 15px;
 }
 
 .actions__info-icon {
@@ -339,6 +340,11 @@ section {
 
 .about__subtitle {
   line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+.about__subtitle.description {
+  margin-bottom: 1rem;
 }
 
 .about__subtitle span {

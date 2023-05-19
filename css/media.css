@@ -48,6 +48,10 @@
     visibility: hidden;
   }
 
+  .header__nav-link span {
+    font-weight: 400;
+  }
+
   .header__wrapper-hamburger {
     display: flex;
     align-items: center;
@@ -210,6 +214,21 @@
 }
 
 @media screen and (max-width: 425px) {
+  .actions .swiper,
+  .actions .swiper-slide img {
+      border-radius: 8px;
+  }
+
+  .actions__wrapper-slider {
+    margin-bottom: 1.5rem;
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 11px var(--swiper-pagination-bullet-horizontal-gap,3px);
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,6px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,6px));
+  }
+
   .section__card {
     width: 100%
   }
@@ -221,11 +240,19 @@
   .header__hamburger-button span {
     height: 1px;
   }
+
+  .about__map {
+    height: calc(100vw - 4rem);
+  }
 }
 
 @media screen and (max-width: 320px) {
   .header__hamburger-button {
     width: 35px;
     height: 20px;
+  }
+
+  .about__subtitle {
+    font-size: 1rem;
   }
 }

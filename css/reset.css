@@ -61,3 +61,11 @@ img {
   pointer-events: none;
   user-select: none;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
