@@ -1,6 +1,6 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.actions__wrapper-slider.desktop .swiper', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 16,
@@ -8,10 +8,18 @@ const swiper = new Swiper('.swiper', {
     delay: 3000,
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.actions__wrapper-slider.desktop .swiper-pagination',
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+});
+
+const swiperMobile = new Swiper('.actions__wrapper-slider.mobile .swiper', {
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 16,
+  autoplay: {
+    delay: 3000,
+  },
+  pagination: {
+    el: '.actions__wrapper-slider.mobile .swiper-pagination',
   },
 });

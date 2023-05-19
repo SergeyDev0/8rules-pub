@@ -6,6 +6,10 @@
   .section__arrow-icon {
     display: none;
   }
+
+  .actions .actions__wrapper-slider.mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -76,6 +80,10 @@
   }
 
   .section__arrow-icon {
+    display: none;
+  }
+
+  .actions .actions__wrapper-slider.desktop {
     display: none;
   }
 }
