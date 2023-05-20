@@ -10,6 +10,10 @@
   .actions .actions__wrapper-slider.mobile {
     display: none;
   }
+
+.section__card-description {
+  min-height: calc(17.9px + .8rem);
+}
 }
 
 @media screen and (max-width: 1024px) {
